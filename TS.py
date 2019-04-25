@@ -46,7 +46,7 @@ class GraphM:
         step += 1
         IN[v] = step
         for i in range(len(self.matrix)):
-            if self.matrix[v][i] != 0 and IN[i] == -1:
+            if IN[i] == -1 and self.matrix[v][i] != 0:
                 self._TS(IN, Sort, step, i)
         Sort.insert(0, v)
 
